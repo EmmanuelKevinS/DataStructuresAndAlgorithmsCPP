@@ -12,7 +12,6 @@ int main(){
 
     //Statically creating objects
     Student s1;
-    Student s2, s3, s4 , s5;
 
     //Dynamically creating objects
     Student *s6 = new Student();
