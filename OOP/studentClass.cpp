@@ -22,7 +22,15 @@ class Student{
         Student(int age, int rollNumber){
             this->age = age;
             this->rollNumber = rollNumber;
-            cout << "Parameterised constructor 2 called"  << "Age: " << age << " " << "Rollnumber: " << rollNumber << endl;
+            cout << "Parameterised constructor 2 called| "  << "Age: " << age << " " << "Rollnumber: " << rollNumber << endl;
+        }
+
+        //Copy constructor
+        Student(Student &stud){
+            // Copy data from `other` to the current object
+            this->age = stud.age;
+            this->rollNumber = stud.rollNumber;
+            cout << "Copy Constructor called | Age: " << age << " Rollnumber: " << rollNumber << endl;
         }
 
         void display(){
@@ -47,5 +55,10 @@ class Student{
                 return;
             }
             this->rollNumber = rollNumber;
+        }
+
+        //Destructor
+        ~Student(){
+            cout << "Destructor called" << endl;
         }
 };
