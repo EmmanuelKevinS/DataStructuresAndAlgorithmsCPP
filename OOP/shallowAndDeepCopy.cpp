@@ -1,4 +1,5 @@
 #include<iostream>
+#include<cstring>
 using namespace std;
 
 class Student{
@@ -10,7 +11,11 @@ class Student{
         //constructor
         Student(int age, char *name){
             this->age = age;
-            this->name = name;
+            // shallow copy
+            // this->name = name;
+            // deep copy 
+            this->name = new char[strlen(name) + 1];
+            strcpy(this->name, name);
         }
         void display(){
             cout << "Name: " << name << ", Age: " << age << endl;
@@ -27,6 +32,7 @@ int main(){
     Student *s2 = new Student(30, name);
     s2->display();
 
+    s1->display();
 
     return 0;
 }
