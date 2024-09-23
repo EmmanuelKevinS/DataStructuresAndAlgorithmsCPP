@@ -54,33 +54,6 @@ class Fraction{
             cout << this->numerator << "/" << this->denominator << " = " << calculateFraction() << endl;
         }
 
-        // void add(Fraction frac) {
-        //     // Step 1: Calculate common denominator
-        //     int commonDenominator = this->denominator * frac.denominator;
-
-        //     // Step 2: Calculate the new numerator for both fractions
-        //     int newFirstNumerator = (this->numerator * frac.denominator);
-        //     int newSecondNumerator = (frac.numerator * this->denominator);
-            
-        //     // Step 3: Add the numerators together
-        //     int finalNumerator = newFirstNumerator + newSecondNumerator;
-
-        //     // Step 4: Set the new numerator and denominator
-        //     this->numerator = finalNumerator;
-        //     this->denominator = commonDenominator;
-
-        //     // Step 5: Simplify the resulting fraction
-        //     pair<int, int> result = simplify();
-
-        //     // Step 6: Output the result
-        //     cout << "-----------------" << endl;
-        //     cout << "First fraction: " << this->numerator << "/" << this->denominator << endl;
-        //     cout << "Second fraction: " << frac.numerator << "/" << frac.denominator << endl;
-        //     cout << "Fraction after addition: " << result.first << " / " << result.second << endl;
-        //     cout << "Decimal value = " << fixed << setprecision(1) << static_cast<float>(result.first) / result.second << endl;
-        //     cout << "-----------------" << endl;
-        // }
-
         void add(Fraction frac){
             int commonDenominator = this->denominator * frac.denominator;
             int newFirstNumerator = (this->numerator * frac.denominator);
